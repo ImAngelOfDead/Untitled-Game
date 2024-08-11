@@ -1781,7 +1781,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ebaf01ee4909b2f42a24410ecdb9b2b1,
         type: 3}
       propertyPath: m_Name
-      value: c2e018aec6704737bb239d3679f0d893
+      value: hitler
       objectReference: {fileID: 0}
     - target: {fileID: 1965148251530778926, guid: ebaf01ee4909b2f42a24410ecdb9b2b1,
         type: 3}
@@ -2300,7 +2300,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ebaf01ee4909b2f42a24410ecdb9b2b1,
         type: 3}
       propertyPath: m_Name
-      value: c2e018aec6704737bb239d3679f0d893 (1)
+      value: hitler
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
