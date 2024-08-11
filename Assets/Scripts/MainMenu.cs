@@ -9,7 +9,18 @@ public class VolumeControl : MonoBehaviour
     void Start()
     {
         
-        volumeSlider.value = audioSource.volume;
+        if (audioSource != null)
+        {
+            
+            audioSource.volume = 0.2f; 
+
+            
+            volumeSlider.value = audioSource.volume;
+        }
+        else
+        {
+            Debug.LogError("AudioSource is not assigned.");
+        }
 
         
         volumeSlider.onValueChanged.AddListener(SetVolume);
@@ -18,6 +29,9 @@ public class VolumeControl : MonoBehaviour
     void SetVolume(float volume)
     {
         
-        audioSource.volume = volume;
+        if (audioSource != null)
+        {
+            audioSource.volume = volume;
+        }
     }
 }

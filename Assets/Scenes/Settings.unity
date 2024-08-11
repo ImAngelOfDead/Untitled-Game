@@ -209,7 +209,7 @@ GameObject:
   - component: {fileID: 165012391}
   - component: {fileID: 165012390}
   m_Layer: 5
-  m_Name: SensX (1)
+  m_Name: SensY
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -231,7 +231,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -194.3, y: 161.8}
+  m_AnchoredPosition: {x: -145.9, y: 166.2}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &165012390
@@ -335,9 +335,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sensitivityXSlider: {fileID: 1937766000}
   sensitivityYSlider: {fileID: 1318108487}
-  jumpKeyInput: {fileID: 0}
-  sprintKeyInput: {fileID: 0}
   saveButton: {fileID: 1196103672}
+  sensitivityXText: {fileID: 685622509}
+  sensitivityYText: {fileID: 165012390}
 --- !u!1 &187834879
 GameObject:
   m_ObjectHideFlags: 0
@@ -558,7 +558,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -193.6, y: 192.8}
+  m_AnchoredPosition: {x: -145.1, y: 227.2}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &685622509
@@ -1547,7 +1547,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -146.2, y: 168.5}
+  m_AnchoredPosition: {x: -145.9, y: 137.4}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1318108487
@@ -1594,10 +1594,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 1551049371}
   m_HandleRect: {fileID: 956267498}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 1
   m_MaxValue: 10
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1906,10 +1906,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 1347356222}
   m_HandleRect: {fileID: 187834880}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 1
   m_MaxValue: 10
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
