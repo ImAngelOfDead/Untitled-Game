@@ -14,7 +14,7 @@ public class GameConfig
 
 public static class ConfigManager
 {
-    private static string configPath = Application.persistentDataPath + "/config.json";
+    private static string configPath = Application.dataPath + "/config.json";
     private static GameConfig config;
 
     public static GameConfig Config
@@ -33,11 +33,13 @@ public static class ConfigManager
     {
         if (System.IO.File.Exists(configPath))
         {
+            Debug.Log("Loading config from " + configPath);
             string json = System.IO.File.ReadAllText(configPath);
             config = JsonUtility.FromJson<GameConfig>(json);
         }
         else
         {
+            Debug.Log("Config file not found, creating new one at " + configPath);
             config = new GameConfig();
             SaveConfig(); // Сохраняем файл при первом запуске
         }
@@ -47,5 +49,6 @@ public static class ConfigManager
     {
         string json = JsonUtility.ToJson(config, true);
         System.IO.File.WriteAllText(configPath, json);
+        Debug.Log("Config saved at " + configPath);
     }
 }

@@ -61,17 +61,19 @@ public class PlayerController : MonoBehaviour
     }
 
     void MouseLook()
-    {
-        rotationX += Input.GetAxis("Mouse X") * ConfigManager.Config.sensitivityX;
-        rotationY += Input.GetAxis("Mouse Y") * ConfigManager.Config.sensitivityY;
-        rotationY = Mathf.Clamp(rotationY, ConfigManager.Config.sensitivityY, ConfigManager.Config.sensitivityX);
+{
+    rotationX += Input.GetAxis("Mouse X") * ConfigManager.Config.sensitivityX;
+    rotationY -= Input.GetAxis("Mouse Y") * ConfigManager.Config.sensitivityY; // Изменяем знак на минус
 
-        Vector3 targetRotation = new Vector3(-rotationY, rotationX, 0);
-        currentRotation = Vector3.SmoothDamp(currentRotation, targetRotation, ref currentVelocity, smoothTime);
+    rotationY = Mathf.Clamp(rotationY, -60f, 60f);
 
-        cameraTransform.localEulerAngles = new Vector3(currentRotation.x, 0, 0);
-        transform.eulerAngles = new Vector3(0, currentRotation.y, 0);
-    }
+    Vector3 targetRotation = new Vector3(rotationY, rotationX, 0); // Теперь используем rotationY прямо
+    currentRotation = Vector3.SmoothDamp(currentRotation, targetRotation, ref currentVelocity, smoothTime);
+
+    cameraTransform.localEulerAngles = new Vector3(currentRotation.x, 0, 0);
+    transform.eulerAngles = new Vector3(0, currentRotation.y, 0);
+}
+
 
     void MovePlayer()
     {
