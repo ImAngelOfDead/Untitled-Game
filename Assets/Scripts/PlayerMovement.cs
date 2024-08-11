@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     public Text staminaText;
     public Text speedText;
 
-    public float jumpForce = 7f;  // Сила прыжка
+    public float jumpForce = 7f; 
 
     private float rotationX = 0f;
     private float rotationY = 0f;
@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour
             cameraTransform = Camera.main.transform;
         }
 
-        // Загружаем настройки из конфигурационного файла
+        
         rotationX = ConfigManager.Config.sensitivityX;
         rotationY = ConfigManager.Config.sensitivityY;
 
@@ -63,11 +63,11 @@ public class PlayerController : MonoBehaviour
     void MouseLook()
 {
     rotationX += Input.GetAxis("Mouse X") * ConfigManager.Config.sensitivityX;
-    rotationY -= Input.GetAxis("Mouse Y") * ConfigManager.Config.sensitivityY; // Изменяем знак на минус
+    rotationY -= Input.GetAxis("Mouse Y") * ConfigManager.Config.sensitivityY; 
 
     rotationY = Mathf.Clamp(rotationY, -60f, 60f);
 
-    Vector3 targetRotation = new Vector3(rotationY, rotationX, 0); // Теперь используем rotationY прямо
+    Vector3 targetRotation = new Vector3(rotationY, rotationX, 0); 
     currentRotation = Vector3.SmoothDamp(currentRotation, targetRotation, ref currentVelocity, smoothTime);
 
     cameraTransform.localEulerAngles = new Vector3(currentRotation.x, 0, 0);
@@ -181,7 +181,7 @@ public class PlayerController : MonoBehaviour
 
     void OnApplicationQuit()
     {
-        // Сохраняем конфигурацию перед выходом из игры
+        
         ConfigManager.SaveConfig();
     }
 }

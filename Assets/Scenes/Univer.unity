@@ -242,6 +242,7 @@ GameObject:
   - component: {fileID: 92796893}
   - component: {fileID: 92796897}
   - component: {fileID: 92796898}
+  - component: {fileID: 92796899}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -331,7 +332,7 @@ Transform:
   m_GameObject: {fileID: 92796892}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.958112, y: 1.5, z: -8.133223}
+  m_LocalPosition: {x: -10, y: 1.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -379,10 +380,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   sprintSpeed: 8
-  sensitivityX: 2
-  sensitivityY: 2
-  minimumY: -60
-  maximumY: 60
   smoothTime: 0.1
   cameraTransform: {fileID: 1260027682}
   maxStamina: 100
@@ -392,6 +389,20 @@ MonoBehaviour:
   staminaText: {fileID: 438914301}
   speedText: {fileID: 400458357}
   jumpForce: 3.5
+--- !u!114 &92796899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 92796892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b0d5e0b2a7e0584391109111d1acd20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teleportThreshold: -10
+  teleportPosition: {x: -10, y: 2, z: -10}
 --- !u!1 &251882582
 GameObject:
   m_ObjectHideFlags: 0
@@ -2220,10 +2231,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blackoutImage: {fileID: 2134996413}
   fadeDuration: 1
-  headRaiseDuration: 1
-  textDelay: 2
-  textFadeDuration: 2
-  liftHeight: 0.5
 --- !u!1 &1305079908
 GameObject:
   m_ObjectHideFlags: 0

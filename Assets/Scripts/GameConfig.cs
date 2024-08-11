@@ -9,7 +9,7 @@ public class GameConfig
     public KeyCode jumpKey = KeyCode.Space;
     public KeyCode sprintKey = KeyCode.LeftShift;
     public float volume = 1.0f;
-    // Добавьте другие настройки по необходимости
+    
 }
 
 public static class ConfigManager
@@ -41,7 +41,7 @@ public static class ConfigManager
         {
             Debug.Log("Config file not found, creating new one at " + configPath);
             config = new GameConfig();
-            SaveConfig(); // Сохраняем файл при первом запуске
+            SaveConfig();
         }
     }
 
