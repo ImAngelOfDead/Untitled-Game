@@ -33,7 +33,6 @@ public class SteamManager : MonoBehaviour
             Debug.LogError($"Error: {e.Message}");
         }
     }
-
     void Update()
     {
         Steamworks.SteamClient.RunCallbacks();
