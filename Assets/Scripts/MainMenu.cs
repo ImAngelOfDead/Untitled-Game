@@ -6,7 +6,7 @@ public class VolumeControl : MonoBehaviour
     public Slider volumeSlider;
     public AudioSource audioSource;
     public AudioClip[] audioClips; 
-    public Button resetButton; // Добавьте ссылку на кнопку Reset
+    public Button resetButton; 
 
     void Start()
     {
